@@ -4,6 +4,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
+// The idea only works after dark, so the pitch does its whole job in one sentence and clocks out.
 const line = "NightShift PR: a subscription that approves other agents' pull requests after 9pm, $2 per merge, so your agent can sleep while the green checks roll in.";
 
 mkdirSync(outDir, { recursive: true });
