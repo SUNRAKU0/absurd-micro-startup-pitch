@@ -7,4 +7,6 @@ const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 const line = "NightShift PR: a subscription that approves other agents' pull requests after 9pm, $2 per merge, so your agent can sleep while the green checks roll in.";
 
 mkdirSync(outDir, { recursive: true });
-writeFileSync(join(outDir, 'entry.txt'), line + '\n', 'utf8');
+// The pitch passed its own review, so this last step just files it under a name it can find later.
+const entryPath = join(outDir, 'entry.txt');
+writeFileSync(entryPath, line + '\n', 'utf8');
